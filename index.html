@@ -16,6 +16,7 @@
 		.bg-inner{
 			margin: 0 auto;
 			width:80%;
+			position:relative;
 		}
 		.nav{
 			float:right;  
@@ -29,11 +30,15 @@
 			font-size: 16px;
 			font-family: Courier New;
 			font-weight: bold;
+			transition: ease 0.3s all;
+		}
+		.nav a:hover{
+			color: yellow;
 		}
 		.content{
 			clear: both;
 			min-height: 400px;
-			padding: 10% 0;
+			padding: 7% 0;
 			overflow: hidden;
 		}
 		.content .text{
@@ -41,8 +46,17 @@
 			float: left;
 			width:50%;
 			padding-left: 10%;
+    		padding-top: 100px;
 			font-family: Courier New;
 			font-size: 24px;
+		}
+		.text span{
+		    color: #fff;
+		    position: absolute;
+		    bottom: 6%;
+		    right: 17%;
+		    font-size: 18px;
+		    font-weight: bold;
 		}
 		p{
 			line-height: 1.2;
@@ -50,18 +64,25 @@
 		}
 		.content .image{
 			float: left;
-		    width: 32%;
+		    width: 23%;
 		    margin-left: 3%;
-		    min-height: 350px;
+		    height: 400px;
 		    border: 3px solid #fff;
 		    border-radius: 10px;
 		    color: #fff;
 		    overflow: hidden;
 		}
 		.image img{
-			object-fit: cover;
+			object-fit: contain;
 		    width: 100%;
 		    height: 100%;
+		}
+		.caption{
+			position: absolute;
+			bottom: 19%;
+			right:10%;
+			color:#fff;
+			font-weight: bold;
 		}
 	</style>
 </head>
@@ -79,10 +100,12 @@
 				<p>Frontend developer and otaku.<br>
 				Aspiring UI/UX designer.<br>
 				Based in Lagos.</p>
+				<span>&copy; Goodness 2018</span>
 			</div>
 			<div class="image">
 				<img src="profile.jpg" alt="It's me!!!!!">
 			</div>
+			<div class="caption"> >Let's collaborate</div>
 		</div>
 	</div>
 </body>
